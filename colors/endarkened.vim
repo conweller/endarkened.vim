@@ -278,7 +278,7 @@ call s:hi('Search', "NONE", s:bg5, "NONE")
 call s:hi('IncSearch', s:yellow1, s:yellow_hi0, "NONE")
 
 call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
-call s:hi("NonText", s:bg5, "None", "NONE")
+call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
 call s:hi("Comment", s:fg4, "NONE", "italic")
@@ -365,13 +365,13 @@ call s:hi("NormalFloatBorder", s:bg5 , "NONE", "NONE")
 hi! link FindrBorder NormalFloatBorder
 
 
-call s:hi('mkdLineBreak', "None", "None", 'NONE')
+call s:hi('mkdLineBreak', "NONE", "NONE", 'NONE')
 call s:hi('mkdCode', s:blue0, s:bg1, 'NONE')
 
-call s:hi('GitGutterAdd', s:green0, s:bg1, "None")
-call s:hi('GitGutterDelete', s:red0, s:bg1, "None")
-call s:hi('GitGutterChange', s:blue0, s:bg1, "None")
-call s:hi('GitGutterChange', s:blue0, s:bg1, "None")
+call s:hi('GitGutterAdd', s:green0, s:bg1, "NONE")
+call s:hi('GitGutterDelete', s:red0, s:bg1, "NONE")
+call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
+call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 hi! link FindrSelected Search
 call s:hi('FindrSelected', "NONE", s:bg2, "NONE")
