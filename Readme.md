@@ -15,3 +15,7 @@ set termguicolors
 set bg=light
 colorscheme endarkened
 ```
+
+## Screenshots
+![dark](screenshots/dark.png)
+![light](screenshots/light.png)
