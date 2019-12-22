@@ -6,8 +6,7 @@
 " -----------------------------------------------------------------------------
 let g:colors_name = "endarkened"
 
-" Functions: {{{
-let s:topcolor = '#01324f'
+" Functions {{{
 function! s:hi(group, guifg, guibg, gui)
   if a:guifg != ""
     exec "hi " . a:group . " guifg=" . a:guifg
@@ -21,7 +20,6 @@ function! s:hi(group, guifg, guibg, gui)
 
 endfunction
 " }}}
-
 " Colors: {{{
 " Dark: {{{
 function! SetEndarkened()
@@ -237,7 +235,7 @@ call s:hi("CursorLineNr", s:blue0, s:bg2, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", s:blue0, s:blue_hi0 , "NONE")
 
-call s:hi("NormalFloat", "NONE", s:bg1 , "NONE")
+call s:hi("NormalFloat", "NONE", s:bg2 , "NONE")
 
 call s:hi("Cursor", s:bg0, s:fg0 , "NONE")
 hi! link TermCursor Cursor
@@ -374,10 +372,10 @@ call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 hi! link FindrSelected Search
-call s:hi('FindrSelected', "NONE", s:bg2, "NONE")
-call s:hi('FindrSelectedDir', s:blue0, s:bg2, "NONE")
-call s:hi('FindrSelectedDir', s:blue0, s:bg2, "NONE")
-call s:hi('FindrSelectedDirPartial', s:green0, s:bg2, "Bold")
+call s:hi('FindrSelected', "NONE", s:bg5, "NONE")
+call s:hi('FindrSelectedDir', s:blue0, s:bg5, "NONE")
+call s:hi('FindrSelectedDir', s:blue0, s:bg5, "NONE")
+call s:hi('FindrSelectedDirPartial', s:green0, s:bg5, "Bold")
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
 
 " }}}
