@@ -1,8 +1,8 @@
 " -----------------------------------------------------------------------------
-" File: enlightened.vim
-" Description: Colorscheme TODO
+" File: endarkened.vim
+" Description: Light and dark colorscheme
 " Author: Connor Onweller
-" Source: TODO
+" Source: https://github.com/conweller/endarkened.vim
 " -----------------------------------------------------------------------------
 let g:colors_name = "endarkened"
 
@@ -221,7 +221,6 @@ if has('nvim')
 endif
 " }}}
 
-" Vanilla Vim Highlights
 " General: {{{
 call s:hi("Normal", s:fg0 , s:bg0, "NONE")
 call s:hi("NormalTerm", s:fg0 , s:bg1, "NONE")
