@@ -8,46 +8,27 @@
 
 if exists('g:lightline')
 
-    if &bg == 'dark'
-        let s:bg0  = ['#101010', "NONE"]
-        let s:bg1  = ['#202020', "NONE"]
-        let s:bg2  = ['#282828', "NONE"]
-        let s:bg4  = ['#505050', "NONE"]
-        let s:fg1  = ['#e8e8e8', "NONE"]
-        let s:fg2  = ['#707070', "NONE"]
-        let s:fg3  = ['#868686', "NONE"]
-        let s:fg4  = ['#dfdfdf', "NONE"]
-
-        let s:yellow =  ['#efe52b', "NONE"]
-        let s:blue   =  ['#4ea3d7', "NONE"]
-        let s:aqua   = ['#20c3cc', "NONE"]
-        let s:orange =  ['#fd9c12', "NONE"]
-        let s:green = ['#70BF92', "NONE"]
-
-    else
-        let s:bg0  = ['#f7f7f7', "NONE"]
-        let s:bg1  = ['#e9e9e9', "NONE"]
-        let s:bg2  = ['#e0e0e0', "NONE"]
-        let s:bg4  = ['#d5d5d5', "NONE"]
-        let s:fg1  = ['#303030', "NONE"]
-        let s:fg2  = ['#c0c0c0', "NONE"]
-        let s:fg3  = ['#909090', "NONE"]
-        let s:fg4  = ['#606060', "NONE"]
-
-        let s:yellow =  ['#afa703', "NONE"]
-        let s:blue   =  ['#3e9ddd', "NONE"]
-        let s:aqua   = ['#20c3cc', "NONE"]
-        let s:orange =  ['#f49716', "NONE"]
-        let s:green = ['#68ba89', "NONE"]
-    endif
+    let s:bg0 = [ EndarkenedGetColor('bg0'), "NONE" ]
+    let s:bg1 = [ EndarkenedGetColor('bg2'), "NONE" ]
+    let s:bg2 = [ EndarkenedGetColor('bg5'), "NONE" ]
+    let s:bg4 = [ EndarkenedGetColor('bg4'), "NONE" ]
+    let s:fg1 = [ EndarkenedGetColor('fg0'), "NONE" ]
+    let s:fg2 = [ EndarkenedGetColor('bg3'), "NONE" ]
+    let s:fg3 = [ EndarkenedGetColor('fg4'), "NONE" ]
+    let s:fg4 = [ EndarkenedGetColor('fg2'), "NONE" ]
+    let s:yellow = [ EndarkenedGetColor('yellow1'), "NONE" ]
+    let s:blue = [ EndarkenedGetColor('blue0'), "NONE" ]
+    let s:aqua = [ EndarkenedGetColor('cyan0'), "NONE" ]
+    let s:orange = [ EndarkenedGetColor('orange0'), "NONE" ]
+    let s:green = [ EndarkenedGetColor('green0'), "NONE" ]
 
   let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
   let s:p.normal.left = [ [ s:bg0, s:fg1, 'bold' ], [ s:fg4, s:bg1 ] ]
   let s:p.normal.right = [ [ s:bg0, s:fg1 ], [ s:fg4, s:bg1 ] ]
   let s:p.normal.middle = [ [ s:fg3, s:bg2 ] ]
-  let s:p.inactive.right = [ [ s:fg4, s:bg2 ], [ s:fg3, s:bg1 ] ]
-  let s:p.inactive.left =  [ [ s:fg4, s:bg2 ], [ s:fg3, s:bg1 ] ]
-  let s:p.inactive.middle = [ [ s:fg3, s:bg1 ] ]
+  let s:p.inactive.right = [ [ s:fg3, s:bg2 ], [ s:fg2, s:bg1 ] ]
+  let s:p.inactive.left =  [ [ s:fg3, s:bg2 ], [ s:fg2, s:bg1 ] ]
+  let s:p.inactive.middle = [ [ s:fg2, s:bg1 ] ]
   let s:p.insert.left = [ [ s:bg0, s:blue, 'bold' ], [ s:fg1, s:bg1 ] ]
   let s:p.insert.right = [ [ s:bg0, s:blue ], [ s:fg1, s:bg1 ] ]
   let s:p.insert.middle = [ [ s:fg3, s:bg2 ] ]

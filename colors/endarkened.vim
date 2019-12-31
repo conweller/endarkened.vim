@@ -17,10 +17,90 @@ function! s:hi(group, guifg, guibg, gui)
   if a:gui != ""
     exec "hi " . a:group . " gui=" . a:gui
   endif
-
+endfunction
+function! EndarkenedGetColor(color)
+  execute 'let color = s:' . a:color
+  return color
 endfunction
 " }}}
 " Colors: {{{
+" Dark Minimal: {{{
+function! SetEndarkenedMinimal()
+  " black
+  let s:black0 = '#101010'
+  let s:black1 = '#181818'
+  let s:black2 = '#202020'
+  let s:black3 = '#707070'
+  let s:black4 = '#505050'
+  let s:black5 = '#282828'
+
+  let s:bg0 = s:black0
+  let s:bg1 = s:black1
+  let s:bg2 = s:black2
+  let s:bg3 = s:black3
+  let s:bg4 = s:black4
+  let s:bg5 = s:black5
+
+  " white
+  let s:white0 = '#e8e8e8'
+  let s:white1 = '#e4e4e4'
+  let s:white2 = '#dfdfdf'
+  let s:white3 = '#797979'
+  let s:white4 = '#868686'
+  let s:white5 = '#d5d5d5'
+
+  " let s:white0 = '#DDF4FA'
+  " let s:white1 = '#D4EAF0'
+  " let s:white2 = '#C5D9DF'
+  " let s:white3 = '#7A9096'
+  " let s:white4 = '#8299A0'
+  " let s:white5 = '#BEE0EA'
+
+  let s:fg0 = s:white0
+  let s:fg1 = s:white1
+  let s:fg2 = s:white2
+  let s:fg3 = s:white3
+  let s:fg4 = s:white4
+  let s:fg5 = s:white5
+
+  " red
+  let s:red0 = '#A9606E'
+  let s:red1 = '#BF7E83'
+  let s:red_hi0 = '#33080C'
+
+  " green
+  let s:green0 = '#708F77'
+  let s:green1 = '#97AEA0'
+  let s:green_hi0 = '#0E2A19'
+  let s:green_hi1 = '#0D2112'
+
+  " blue
+  let s:blue0 = '#93B1C6'
+  let s:blue1 = '#A9C4D8'
+  let s:blue_hi0 = '#0B3350'
+  let s:blue_hi1 = '#05253A'
+
+  " purple
+  let s:purple0 = '#D2C9EC'
+  let s:purple1 = '#E3DAF6'
+  let s:purple_hi0 = '#231945'
+
+  " yellow
+  let s:yellow0 = '#AFAD8B'
+  let s:yellow1 = '#EFEDCE'
+  let s:yellow_hi0 = '#565102'
+
+  " orange
+  let s:orange0 = '#EDD0B4'
+  let s:orange1 = '#FDE5C4'
+  let s:orange_hi0 = '#542501'
+
+  " cyan
+  let s:cyan0 = '#869596'
+  let s:cyan1 = '#B6CBCC'
+  let s:cyan_hi0 = '#00474B'
+endfunction
+" }}}
 " Dark: {{{
 function! SetEndarkened()
   " black
@@ -30,13 +110,6 @@ function! SetEndarkened()
   let s:black3 = '#707070'
   let s:black4 = '#505050'
   let s:black5 = '#282828'
-
-  " let s:black0 = '#0B1415'
-  " let s:black1 = '#132123'
-  " let s:black2 = '#19282A'
-  " let s:black3 = '#4F6B71'
-  " let s:black4 = '#3B5055'
-  " let s:black5 = '#253235'
 
   let s:bg0 = s:black0
   let s:bg1 = s:black1
@@ -105,8 +178,8 @@ function! SetEndarkened()
   let s:cyan_hi0 = '#00474B'
 endfunction
 " }}}
-" Light: {{{
-function! SetEndarkenedLight()
+" Light Minimal:: {{{
+function! SetEndarkenedLightMinimal()
   " black
   let s:black0 = '#303030'
   let s:black1 = '#454545'
@@ -114,13 +187,6 @@ function! SetEndarkenedLight()
   let s:black3 = '#b0b0b0'
   let s:black4 = '#909090'
   let s:black5 = '#707070'
-
-  " let s:black0 = '#2E4147'
-  " let s:black1 = '#3F545B'
-  " let s:black2 = '#4D666F'
-  " let s:black3 = '#6F8B95'
-  " let s:black4 = '#56727C'
-  " let s:black5 = '#44555B'
 
   let s:fg0 = s:black0
   let s:fg1 = s:black1
@@ -137,12 +203,75 @@ function! SetEndarkenedLight()
   let s:white4 = '#d5d5d5'
   let s:white5 = '#e0e0e0'
 
-  " let s:white0 = '#ECF3F5'
-  " let s:white1 = '#E6ECEE'
-  " let s:white2 = '#D4E1E5'
-  " let s:white3 = '#BCD3DA'
-  " let s:white4 = '#C5D7DD'
-  " let s:white5 = '#CDDFE5'
+  let s:bg0 = s:white0
+  let s:bg1 = s:white1
+  let s:bg2 = s:white2
+  let s:bg3 = s:white3
+  let s:bg4 = s:white4
+  let s:bg5 = s:white5
+
+  " red
+  let s:red0 = '#C9808C'
+  let s:red1 = '#C46578'
+  let s:red_hi0 = '#FAB9B7'
+
+  " green
+  let s:green0 = '#9DB7A4'
+  let s:green1 = '#77997F'
+  let s:green_hi0 = '#bcf2d0'
+  let s:green_hi1 = '#cef6dd'
+
+  " blue
+  let s:blue0 = '#7FA7C7'
+  let s:blue1 = '#5E87A1'
+  let s:blue_hi0 = '#cce6f7'
+  let s:blue_hi1 = '#deecf5'
+
+  " purple
+  let s:purple0 = '#AA9CC8'
+  let s:purple1 = '#8B7AA7'
+  let s:purple_hi0 = '#e4d8f6'
+
+  " yellow
+  let s:yellow0 = '#BBB87A'
+  let s:yellow1 = '#959367'
+  let s:yellow_hi0 = '#f1eeaa'
+
+  " orange
+  let s:orange0 = '#C4A272'
+  let s:orange1 = '#A3775A'
+  let s:orange_hi0 = '#f7ddc4'
+
+  " cyan
+  let s:cyan0 = '#67A6AA'
+  let s:cyan1 = '#5B8385'
+  let s:cyan_hi0 = '#C8F3F6'
+endfunction
+" }}}
+" Light: {{{
+function! SetEndarkenedLight()
+  " black
+  let s:black0 = '#303030'
+  let s:black1 = '#454545'
+  let s:black2 = '#606060'
+  let s:black3 = '#b0b0b0'
+  let s:black4 = '#909090'
+  let s:black5 = '#707070'
+
+  let s:fg0 = s:black0
+  let s:fg1 = s:black1
+  let s:fg2 = s:black2
+  let s:fg3 = s:black3
+  let s:fg4 = s:black4
+  let s:fg5 = s:black5
+
+  " white
+  let s:white0 = '#f7f7f7'
+  let s:white1 = '#f0f0f0'
+  let s:white2 = '#e9e9e9'
+  let s:white3 = '#c0c0c0'
+  let s:white4 = '#d5d5d5'
+  let s:white5 = '#e0e0e0'
 
   let s:bg0 = s:white0
   let s:bg1 = s:white1
@@ -196,10 +325,7 @@ else
   call SetEndarkenedLight()
 endif
 " }}}
-
-
 " }}}
-
 " Terminal: {{{
 if has('nvim')
   let g:terminal_color_0 = s:bg5
@@ -347,13 +473,24 @@ if has("spell")
 endif
 " }}}
 " Plugin {{{
-hi! default CocUnderline    cterm=underline gui=underline
+hi! CocUnderline    cterm=underline gui=underline
+hi! LspDiagnosticsUnderline    cterm=underline gui=underline
+
 call s:hi('CocErrorSign', s:red1, s:red_hi0, 'NONE')
+hi! link LspDiagnosticsError CocErrorSign
+
 call s:hi('CocWarningSign', s:yellow1, s:yellow_hi0, 'NONE')
 hi! link CocInfoSign CocWarningSign
+hi! link CocInfoSign LspDiagnosticsWarning
+
 call s:hi('CocHintSign', s:purple1, s:purple_hi0, 'NONE')
+hi! link LspDiagnosticsHint CocHintSign
+hi! link LspDiagnosticsInformation CocHintSign
+
 call s:hi('CocSelectedText', s:cyan1, s:cyan_hi0, 'NONE')
+
 call s:hi('CocCodeLens', s:bg3, "NONE", 'NONE')
+
 
 hi! link mkdListItemLine cleared
 
@@ -370,11 +507,7 @@ call s:hi('GitGutterDelete', s:red0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
-hi! link FindrSelected Search
 call s:hi('FindrSelected', "NONE", s:bg5, "NONE")
-call s:hi('FindrSelectedDir', s:blue0, s:bg5, "NONE")
-call s:hi('FindrSelectedDir', s:blue0, s:bg5, "NONE")
-call s:hi('FindrSelectedDirPartial', s:green0, s:bg5, "Bold")
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
 
 " }}}
