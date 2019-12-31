@@ -507,7 +507,6 @@ call s:hi('GitGutterDelete', s:red0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
-call s:hi('FindrSelected', "NONE", s:bg5, "NONE")
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
 
 " }}}
