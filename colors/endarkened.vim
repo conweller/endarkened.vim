@@ -49,13 +49,6 @@ function! SetEndarkenedMinimal()
   let s:white4 = '#868686'
   let s:white5 = '#d5d5d5'
 
-  " let s:white0 = '#DDF4FA'
-  " let s:white1 = '#D4EAF0'
-  " let s:white2 = '#C5D9DF'
-  " let s:white3 = '#7A9096'
-  " let s:white4 = '#8299A0'
-  " let s:white5 = '#BEE0EA'
-
   let s:fg0 = s:white0
   let s:fg1 = s:white1
   let s:fg2 = s:white2
@@ -64,19 +57,19 @@ function! SetEndarkenedMinimal()
   let s:fg5 = s:white5
 
   " red
-  let s:red0 = '#A9606E'
-  let s:red1 = '#BF7E83'
+  let s:red0 = '#C7939D'
+  let s:red1 = '#D7AEB2'
   let s:red_hi0 = '#33080C'
 
   " green
-  let s:green0 = '#708F77'
-  let s:green1 = '#97AEA0'
+  let s:green0 = '#97AEA0'
+  let s:green1 = '#A9D0B2'
   let s:green_hi0 = '#0E2A19'
   let s:green_hi1 = '#0D2112'
 
   " blue
-  let s:blue0 = '#93B1C6'
-  let s:blue1 = '#A9C4D8'
+  let s:blue0 = '#A9C4D8'
+  let s:blue1 = '#BAD3E4'
   let s:blue_hi0 = '#0B3350'
   let s:blue_hi1 = '#05253A'
 
@@ -86,8 +79,8 @@ function! SetEndarkenedMinimal()
   let s:purple_hi0 = '#231945'
 
   " yellow
-  let s:yellow0 = '#AFAD8B'
-  let s:yellow1 = '#EFEDCE'
+  let s:yellow0 = '#DEDCB4'
+  let s:yellow1 = '#F1F0D2'
   let s:yellow_hi0 = '#565102'
 
   " orange
@@ -96,8 +89,8 @@ function! SetEndarkenedMinimal()
   let s:orange_hi0 = '#542501'
 
   " cyan
-  let s:cyan0 = '#869596'
-  let s:cyan1 = '#B6CBCC'
+  let s:cyan0 = '#ACCED0'
+  let s:cyan1 = '#C6DCDE'
   let s:cyan_hi0 = '#00474B'
 endfunction
 " }}}
@@ -273,6 +266,13 @@ function! SetEndarkenedLight()
   let s:white4 = '#d5d5d5'
   let s:white5 = '#e0e0e0'
 
+  " let s:white0 = '#F7F4EC'
+  " let s:white1 = '#F4EDDF'
+  " let s:white2 = '#EEE6D3'
+  " let s:white3 = '#C0B7A2'
+  " let s:white4 = '#D1C1AC'
+  " let s:white5 = '#E0D7C9'
+
   let s:bg0 = s:white0
   let s:bg1 = s:white1
   let s:bg2 = s:white2
@@ -386,7 +386,7 @@ call s:hi("MatchParen", s:blue_hi0, s:blue0, "NONE")
 call s:hi('StatusLine', s:fg2, s:bg5, "NONE")
 call s:hi('StatusLineNC', s:bg5, s:bg5, "NONE")
 
-call s:hi('VertSplit', s:bg5, s:bg5, "NONE")
+call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
 call s:hi('Directory', s:blue0, "NONE", "NONE")
 
@@ -481,7 +481,7 @@ hi! link LspDiagnosticsError CocErrorSign
 
 call s:hi('CocWarningSign', s:yellow1, s:yellow_hi0, 'NONE')
 hi! link CocInfoSign CocWarningSign
-hi! link CocInfoSign LspDiagnosticsWarning
+hi! link LspDiagnosticsWarning CocWarningSign
 
 call s:hi('CocHintSign', s:purple1, s:purple_hi0, 'NONE')
 hi! link LspDiagnosticsHint CocHintSign
