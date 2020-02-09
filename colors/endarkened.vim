@@ -24,83 +24,13 @@ function! EndarkenedGetColor(color)
 endfunction
 " }}}
 " Colors: {{{
-" Dark Minimal: {{{
-function! SetEndarkenedMinimal()
-  " black
-  let s:black0 = '#101010'
-  let s:black1 = '#181818'
-  let s:black2 = '#202020'
-  let s:black3 = '#707070'
-  let s:black4 = '#505050'
-  let s:black5 = '#282828'
-
-  let s:bg0 = s:black0
-  let s:bg1 = s:black1
-  let s:bg2 = s:black2
-  let s:bg3 = s:black3
-  let s:bg4 = s:black4
-  let s:bg5 = s:black5
-
-  " white
-  let s:white0 = '#e8e8e8'
-  let s:white1 = '#e4e4e4'
-  let s:white2 = '#dfdfdf'
-  let s:white3 = '#797979'
-  let s:white4 = '#868686'
-  let s:white5 = '#d5d5d5'
-
-  let s:fg0 = s:white0
-  let s:fg1 = s:white1
-  let s:fg2 = s:white2
-  let s:fg3 = s:white3
-  let s:fg4 = s:white4
-  let s:fg5 = s:white5
-
-  " red
-  let s:red0 = '#C7939D'
-  let s:red1 = '#D7AEB2'
-  let s:red_hi0 = '#33080C'
-
-  " green
-  let s:green0 = '#97AEA0'
-  let s:green1 = '#A9D0B2'
-  let s:green_hi0 = '#0E2A19'
-  let s:green_hi1 = '#0D2112'
-
-  " blue
-  let s:blue0 = '#A9C4D8'
-  let s:blue1 = '#BAD3E4'
-  let s:blue_hi0 = '#0B3350'
-  let s:blue_hi1 = '#05253A'
-
-  " purple
-  let s:purple0 = '#D2C9EC'
-  let s:purple1 = '#E3DAF6'
-  let s:purple_hi0 = '#231945'
-
-  " yellow
-  let s:yellow0 = '#DEDCB4'
-  let s:yellow1 = '#F1F0D2'
-  let s:yellow_hi0 = '#565102'
-
-  " orange
-  let s:orange0 = '#EDD0B4'
-  let s:orange1 = '#FDE5C4'
-  let s:orange_hi0 = '#542501'
-
-  " cyan
-  let s:cyan0 = '#ACCED0'
-  let s:cyan1 = '#C6DCDE'
-  let s:cyan_hi0 = '#00474B'
-endfunction
-" }}}
 " Dark: {{{
 function! SetEndarkened()
   " black
   let s:black0 = '#101010'
   let s:black1 = '#181818'
   let s:black2 = '#202020'
-  let s:black3 = '#707070'
+  let s:black3 = '#656565'
   let s:black4 = '#505050'
   let s:black5 = '#282828'
 
@@ -115,7 +45,7 @@ function! SetEndarkened()
   let s:white0 = '#e8e8e8'
   let s:white1 = '#e4e4e4'
   let s:white2 = '#dfdfdf'
-  let s:white3 = '#797979'
+  let s:white3 = '#767676'
   let s:white4 = '#868686'
   let s:white5 = '#d5d5d5'
 
@@ -168,77 +98,7 @@ function! SetEndarkened()
   " cyan
   let s:cyan0 = '#038f96'
   let s:cyan1 = '#20c3cc'
-  let s:cyan_hi0 = '#00474B'
-endfunction
-" }}}
-" Light Minimal:: {{{
-function! SetEndarkenedLightMinimal()
-  " black
-  let s:black0 = '#303030'
-  let s:black1 = '#454545'
-  let s:black2 = '#606060'
-  let s:black3 = '#b0b0b0'
-  let s:black4 = '#909090'
-  let s:black5 = '#707070'
-
-  let s:fg0 = s:black0
-  let s:fg1 = s:black1
-  let s:fg2 = s:black2
-  let s:fg3 = s:black3
-  let s:fg4 = s:black4
-  let s:fg5 = s:black5
-
-  " white
-  let s:white0 = '#f7f7f7'
-  let s:white1 = '#f0f0f0'
-  let s:white2 = '#e9e9e9'
-  let s:white3 = '#c0c0c0'
-  let s:white4 = '#d5d5d5'
-  let s:white5 = '#e0e0e0'
-
-  let s:bg0 = s:white0
-  let s:bg1 = s:white1
-  let s:bg2 = s:white2
-  let s:bg3 = s:white3
-  let s:bg4 = s:white4
-  let s:bg5 = s:white5
-
-  " red
-  let s:red0 = '#C9808C'
-  let s:red1 = '#C46578'
-  let s:red_hi0 = '#FAB9B7'
-
-  " green
-  let s:green0 = '#9DB7A4'
-  let s:green1 = '#77997F'
-  let s:green_hi0 = '#bcf2d0'
-  let s:green_hi1 = '#cef6dd'
-
-  " blue
-  let s:blue0 = '#7FA7C7'
-  let s:blue1 = '#5E87A1'
-  let s:blue_hi0 = '#cce6f7'
-  let s:blue_hi1 = '#deecf5'
-
-  " purple
-  let s:purple0 = '#AA9CC8'
-  let s:purple1 = '#8B7AA7'
-  let s:purple_hi0 = '#e4d8f6'
-
-  " yellow
-  let s:yellow0 = '#BBB87A'
-  let s:yellow1 = '#959367'
-  let s:yellow_hi0 = '#f1eeaa'
-
-  " orange
-  let s:orange0 = '#C4A272'
-  let s:orange1 = '#A3775A'
-  let s:orange_hi0 = '#f7ddc4'
-
-  " cyan
-  let s:cyan0 = '#67A6AA'
-  let s:cyan1 = '#5B8385'
-  let s:cyan_hi0 = '#C8F3F6'
+  let s:cyan_hi0 = '#08383C'
 endfunction
 " }}}
 " Light: {{{
@@ -265,13 +125,6 @@ function! SetEndarkenedLight()
   let s:white3 = '#c0c0c0'
   let s:white4 = '#d5d5d5'
   let s:white5 = '#e0e0e0'
-
-  " let s:white0 = '#F7F4EC'
-  " let s:white1 = '#F4EDDF'
-  " let s:white2 = '#EEE6D3'
-  " let s:white3 = '#C0B7A2'
-  " let s:white4 = '#D1C1AC'
-  " let s:white5 = '#E0D7C9'
 
   let s:bg0 = s:white0
   let s:bg1 = s:white1
@@ -326,6 +179,7 @@ else
 endif
 " }}}
 " }}}
+
 " Terminal: {{{
 if has('nvim')
   let g:terminal_color_0 = s:bg5
@@ -346,7 +200,6 @@ if has('nvim')
   let g:terminal_color_15 = s:fg2
 endif
 " }}}
-
 " General: {{{
 call s:hi("Normal", s:fg0 , s:bg0, "NONE")
 call s:hi("NormalTerm", s:fg0 , s:bg1, "NONE")
@@ -356,7 +209,7 @@ hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:blue0, s:bg2, "Bold")
+call s:hi("CursorLineNr", s:fg0, s:bg2, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", s:blue0, s:blue_hi0 , "NONE")
 
@@ -370,7 +223,7 @@ hi! link TermCursor Cursor
 
 call s:hi("Folded", s:bg3, s:bg1, "NONE")
 call s:hi("Error", s:red1, s:red_hi0, "NONE")
-call s:hi("Todo", s:cyan0, s:cyan_hi0, "NONE")
+call s:hi("Todo", s:cyan0, s:cyan_hi0, "bold")
 
 call s:hi("ErrorMsg", s:red1, s:red_hi0, "NONE")
 hi! link WarningMsg ErrorMsg
@@ -381,19 +234,23 @@ hi! link Question IncSearch
 
 call s:hi("ModeMsg", s:blue1, s:blue_hi1, "NONE")
 
-call s:hi("MatchParen", s:blue_hi0, s:blue0, "NONE")
+call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 
 call s:hi('StatusLine', s:fg2, s:bg5, "NONE")
 call s:hi('StatusLineNC', s:bg5, s:bg5, "NONE")
 
-call s:hi('VertSplit', s:bg5, "NONE", "NONE")
+call s:hi('TablineSel', s:fg5, s:bg0, "NONE")
+call s:hi('Tabline', s:bg3, s:bg5, "NONE")
+call s:hi('TablineFill', s:fg0, s:bg5, "NONE")
+
+call s:hi('VertSplit', s:bg0, s:bg5, "NONE")
 
 call s:hi('Directory', s:blue0, "NONE", "NONE")
 
 hi! link Title Directory
 
 
-call s:hi('Visual', s:orange0, s:orange_hi0, "NONE")
+call s:hi('Visual', s:purple0, s:purple_hi0, "NONE")
 hi! link VisualNOS Visual
 
 call s:hi('Search', "NONE", s:bg5, "NONE")
@@ -404,9 +261,11 @@ call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
+call s:hi('markdownCode', s:blue0, s:bg1, 'NONE')
 call s:hi("Comment", s:fg4, "NONE", "italic")
-call s:hi("Conceal", s:blue0, s:blue_hi1, "NONE")
-" call s:hi("NonText", s:bg3, "NONE", "italic")
+call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
+
+call s:hi("Underlined", s:blue0,  "NONE", "underline")
 
 call s:hi("Keyword", s:blue1,  "NONE", "bold")
 hi! link Statement Keyword
@@ -422,14 +281,11 @@ hi! link Constant Operator
 hi! link Character Operator
 hi! link SpecialKey Operator
 
-" call s:hi("String", s:green1, s:green_hi1, "NONE")
 call s:hi("String", s:green1, "NONE", "NONE")
-" call s:hi("htmlTagName", s:blue1, s:blue_hi1, "NONE")
 call s:hi("htmlTagName", s:blue1, "NONE", "NONE")
 call s:hi("htmlTag", s:blue1, "NONE", "NONE")
 call s:hi("htmlH1", s:fg0, "NONE", "Bold")
 hi! link htmlEndTag htmlTag
-" call s:hi("htmlEndTag", s:blue1, "NONE", "NONE")
 
 call s:hi("Type", s:purple0, "NONE", "NONE")
 hi! link Function Type
@@ -508,6 +364,9 @@ call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
+
+" call s:hi('FindrSelected', "NONE", s:blue_hi0, "NONE")
+" call s:hi('FindrMatch', s:bg0, s:cyan0, "Bold")
 
 " }}}
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
