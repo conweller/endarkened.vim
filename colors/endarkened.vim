@@ -232,7 +232,7 @@ hi! link MoreMsg IncSearch
 hi! link MoreMsg IncSearch
 hi! link Question IncSearch
 
-call s:hi("ModeMsg", s:blue1, s:blue_hi1, "NONE")
+call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 
@@ -365,7 +365,7 @@ call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
 
-" call s:hi('FindrSelected', "NONE", s:blue_hi0, "NONE")
+" call s:hi('FindrSelected', "NONE", s:bg2, "NONE")
 " call s:hi('FindrMatch', s:bg0, s:cyan0, "Bold")
 
 " }}}
