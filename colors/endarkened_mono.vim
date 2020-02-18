@@ -4,7 +4,7 @@
 " Author: Connor Onweller
 " Source: https://github.com/conweller/endarkened.vim
 " -----------------------------------------------------------------------------
-let g:colors_name = "endarkened"
+let g:colors_name = "endarkened_mono"
 
 " Functions {{{
 function! s:hi(group, guifg, guibg, gui)
@@ -43,11 +43,11 @@ function! SetEndarkened()
 
   " white
   let s:white0 = '#e0e0e0'
-  let s:white1 = '#d9d9d9'
-  let s:white2 = '#d3d3d3'
+  let s:white1 = '#d0d0d0'
+  let s:white2 = '#b5b5b5'
   let s:white3 = '#767676'
   let s:white4 = '#868686'
-  let s:white5 = '#c9c9c9'
+  let s:white5 = '#a0a0a0'
 
   " let s:white0 = '#DDF4FA'
   " let s:white1 = '#D4EAF0'
@@ -107,7 +107,7 @@ function! SetEndarkenedLight()
   let s:black0 = '#303030'
   let s:black1 = '#454545'
   let s:black2 = '#606060'
-  let s:black3 = '#b0b0b0'
+  let s:black3 = '#a5a5a5'
   let s:black4 = '#898989'
   let s:black5 = '#707070'
 
@@ -184,19 +184,19 @@ endif
 if has('nvim')
   let g:terminal_color_0 = s:bg5
   let g:terminal_color_1 = s:red1
-  let g:terminal_color_2 = s:yellow1
-  let g:terminal_color_3 = s:green1
-  let g:terminal_color_4 = s:blue1
-  let g:terminal_color_5 = s:purple0
-  let g:terminal_color_6 = s:cyan1
+  let g:terminal_color_2 = s:fg4
+  let g:terminal_color_3 = s:fg4
+  let g:terminal_color_4 = s:fg5
+  let g:terminal_color_5 = s:fg4
+  let g:terminal_color_6 = s:fg1
   let g:terminal_color_7 = s:fg0
   let g:terminal_color_8 = s:bg3
   let g:terminal_color_9 = s:red1
-  let g:terminal_color_10 = s:yellow1
-  let g:terminal_color_11 = s:green1
-  let g:terminal_color_12 = s:blue1
-  let g:terminal_color_13 = s:purple0
-  let g:terminal_color_14 = s:cyan1
+  let g:terminal_color_10 = s:fg4
+  let g:terminal_color_11 = s:fg4
+  let g:terminal_color_12 = s:fg5
+  let g:terminal_color_13 = s:fg4
+  let g:terminal_color_14 = s:fg1
   let g:terminal_color_15 = s:fg2
 endif
 " }}}
@@ -211,7 +211,7 @@ call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
 call s:hi("CursorLineNr", s:fg0, s:bg2, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
-call s:hi("QuickFixLine", s:blue0, s:blue_hi0 , "NONE")
+call s:hi("QuickFixLine", "NONE", "s:bg1" , "NONE")
 
 call s:hi("NormalFloat", "NONE", s:bg2 , "NONE")
 
@@ -223,18 +223,18 @@ hi! link TermCursor Cursor
 
 call s:hi("Folded", s:bg3, s:bg1, "NONE")
 call s:hi("Error", s:red1, s:red_hi0, "NONE")
-call s:hi("Todo", s:cyan0, s:cyan_hi0, "bold")
+call s:hi("Todo", s:bg3, "NONE", "Underline,Bold")
 
 call s:hi("ErrorMsg", s:red1, s:red_hi0, "NONE")
 hi! link WarningMsg ErrorMsg
 
-hi! link MoreMsg IncSearch
-hi! link MoreMsg IncSearch
-hi! link Question IncSearch
+call s:hi('MoreMsg', s:yellow1, s:yellow_hi0, "NONE")
+hi! link MoreMsg MoreMsg
+hi! link Question MoreMsg
 
 call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
-call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
+call s:hi("MatchParen", s:black0, s:yellow0, "Bold")
 
 call s:hi('StatusLine', s:fg2, s:bg5, "NONE")
 call s:hi('StatusLineNC', s:bg5, s:bg5, "NONE")
@@ -245,17 +245,17 @@ call s:hi('TablineFill', s:fg0, s:bg5, "NONE")
 
 call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
-call s:hi('Directory', s:blue0, "NONE", "NONE")
+call s:hi('Directory', s:fg2, "NONE", "NONE")
 
 hi! link Title Directory
 
 
-call s:hi('Visual', s:purple0, s:purple_hi0, "NONE")
+call s:hi('Visual', s:blue0, s:blue_hi1, "NONE")
 hi! link VisualNOS Visual
 
 call s:hi('Search', "NONE", s:bg5, "NONE")
 
-call s:hi('IncSearch', s:yellow1, s:yellow_hi0, "NONE")
+call s:hi('IncSearch',s:bg0, s:orange1, "Bold")
 
 call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
@@ -267,32 +267,32 @@ call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
 
 call s:hi("Underlined", "NONE",  "NONE", "underline")
 
-call s:hi("Keyword", s:blue1,  "NONE", "bold")
+call s:hi("Keyword", s:fg2,  "NONE", "bold")
 hi! link Statement Keyword
 hi! link Conditional Keyword
 hi! link Repeat Keyword
 hi! link Label Keyword
 hi! link Exception Keyword
 
-call s:hi("Operator", s:red1,  "NONE", "NONE")
+call s:hi("Operator", s:fg5,  "NONE", "NONE")
 hi! link Identifier Operator
 hi! link Boolean Operator
 hi! link Constant Operator
 hi! link Character Operator
 hi! link SpecialKey Operator
 
-call s:hi("String", s:green1, "NONE", "NONE")
-call s:hi("htmlTagName", s:blue1, "NONE", "NONE")
-call s:hi("htmlTag", s:blue1, "NONE", "NONE")
+call s:hi("String", s:fg4, "NONE", "NONE")
+call s:hi("htmlTagName", s:fg1, "NONE", "NONE")
+call s:hi("htmlTag", s:fg1, "NONE", "NONE")
 call s:hi("htmlH1", s:fg0, "NONE", "Bold")
 hi! link htmlEndTag htmlTag
 
-call s:hi("Type", s:purple0, "NONE", "NONE")
+call s:hi("Type", s:fg5, "NONE", "NONE")
 hi! link Function Type
 hi! link Constant Type
 hi! link Character Type
 
-call s:hi("PreProc", s:cyan1, "NONE", "NONE")
+call s:hi("PreProc", s:fg4, "NONE", "NONE")
 hi! link Include PreProc
 hi! link Define PreProc
 hi! link Macro PreProc
@@ -301,7 +301,7 @@ hi! link Number PreProc
 hi! link Float PreProc
 hi! link Special PreProc
 
-call s:hi("StorageClass", s:orange1, "NONE", "NONE")
+call s:hi("StorageClass", s:fg5, "NONE", "NONE")
 hi! link Structure StorageClass
 hi! link Typedef StorageClass
 
@@ -363,7 +363,7 @@ call s:hi('GitGutterDelete', s:red0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
-call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
+call s:hi('FindrDirPartial', s:fg5, "NONE", "Bold")
 
 " call s:hi('FindrSelected', "NONE", s:bg2, "NONE")
 " call s:hi('FindrMatch', s:bg0, s:cyan0, "Bold")
