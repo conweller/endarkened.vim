@@ -261,9 +261,9 @@ call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
-call s:hi('markdownCode', s:fg3, s:bg1, 'NONE')
+call s:hi('markdownCode', s:fg5, s:bg1, 'NONE')
 call s:hi("Comment", s:bg4, "NONE", "italic")
-call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
+call s:hi("Conceal", s:fg3 , "NONE", "NONE")
 
 call s:hi("Underlined", "NONE",  "NONE", "underline")
 
