@@ -204,14 +204,15 @@ endif
 call s:hi("Normal", s:fg0 , s:bg0, "NONE")
 call s:hi("NormalTerm", s:fg0 , s:bg1, "NONE")
 
-call s:hi("LineNr", s:bg3, s:bg1, "NONE")
+call s:hi("LineNr", s:bg4, s:bg0, "NONE")
 hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:fg0, s:bg2, "Bold")
+call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", s:blue0, s:blue_hi0 , "NONE")
+call s:hi("EndOfBuffer", s:bg0, s:bg0, "NONE")
 
 call s:hi("NormalFloat", "NONE", s:bg2 , "NONE")
 
@@ -236,8 +237,8 @@ call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 
-call s:hi('StatusLine', s:fg2, s:bg5, "NONE")
-call s:hi('StatusLineNC', s:bg5, s:bg5, "NONE")
+call s:hi('StatusLine', s:bg5, s:bg0, "Underline")
+call s:hi('StatusLineNC', s:bg5, s:bg0, "Underline")
 
 call s:hi('TablineSel', s:fg5, s:bg0, "NONE")
 call s:hi('Tabline', s:bg3, s:bg5, "NONE")
@@ -261,7 +262,7 @@ call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
-call s:hi('markdownCode', s:fg5, s:bg1, 'NONE')
+call s:hi('markdownCode', s:fg2, "NONE", 'NONE')
 call s:hi("Comment", s:bg4, "NONE", "italic")
 call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
 
@@ -351,8 +352,6 @@ call s:hi('CocCodeLens', s:bg3, "NONE", 'NONE')
 hi! link mkdListItemLine cleared
 
 highlight default link WhichKeyFloating Pmenu
-call s:hi("NormalFloatBorder", s:bg5 , "NONE", "NONE")
-hi! link FindrBorder NormalFloatBorder
 
 
 call s:hi('mkdLineBreak', "NONE", "NONE", 'NONE')
@@ -364,9 +363,7 @@ call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
-
-" call s:hi('FindrSelected', "NONE", s:bg2, "NONE")
-" call s:hi('FindrMatch', s:bg0, s:cyan0, "Bold")
+hi! link FindrBorder VertSplit
 
 " }}}
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
