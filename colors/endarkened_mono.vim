@@ -27,11 +27,11 @@ endfunction
 " Dark: {{{
 function! SetEndarkened()
   " black
-  let s:black0 = '#101010'
-  let s:black1 = '#1e1e1e'
+  let s:black0 = '#151515'
+  let s:black1 = '#202020'
   let s:black2 = '#262626'
   let s:black3 = '#656565'
-  let s:black4 = '#505050'
+  let s:black4 = '#4e4e4e'
   let s:black5 = '#303030'
 
   let s:bg0 = s:black0
@@ -208,8 +208,9 @@ call s:hi("LineNr", s:bg4, s:bg0, "NONE")
 hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
+hi! link CursorLineNr LineNr
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
+" call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", "NONE", "s:bg1" , "NONE")
 
@@ -237,12 +238,12 @@ call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:black0, s:yellow0, "Bold")
 
-call s:hi('StatusLine', s:bg5, s:bg0, "Underline")
-call s:hi('StatusLineNC', s:bg5, s:bg0, "Underline")
+call s:hi('StatusLine', s:fg4, s:bg5, "None")
+call s:hi('StatusLineNC', s:bg4, s:bg5, "None")
 
-call s:hi('TablineSel', s:fg5, s:bg0, "NONE")
-call s:hi('Tabline', s:bg3, s:bg5, "NONE")
-call s:hi('TablineFill', s:fg0, s:bg5, "NONE")
+call s:hi('TablineSel', s:fg4, s:bg2, "None")
+call s:hi('Tabline', s:bg4, s:bg0, "NONE")
+call s:hi("TablineFill", s:bg0, s:bg0, "None")
 
 call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 

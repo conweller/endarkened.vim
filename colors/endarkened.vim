@@ -27,11 +27,11 @@ endfunction
 " Dark: {{{
 function! SetEndarkened()
   " black
-  let s:black0 = '#101010'
-  let s:black1 = '#1e1e1e'
+  let s:black0 = '#151515'
+  let s:black1 = '#202020'
   let s:black2 = '#262626'
   let s:black3 = '#656565'
-  let s:black4 = '#505050'
+  let s:black4 = '#4e4e4e'
   let s:black5 = '#303030'
 
   let s:bg0 = s:black0
@@ -48,13 +48,6 @@ function! SetEndarkened()
   let s:white3 = '#767676'
   let s:white4 = '#868686'
   let s:white5 = '#c9c9c9'
-
-  " let s:white0 = '#DDF4FA'
-  " let s:white1 = '#D4EAF0'
-  " let s:white2 = '#C5D9DF'
-  " let s:white3 = '#7A9096'
-  " let s:white4 = '#8299A0'
-  " let s:white5 = '#BEE0EA'
 
   let s:fg0 = s:white0
   let s:fg1 = s:white1
@@ -209,7 +202,8 @@ hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
+" call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
+hi! link CursorLineNr LineNr
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", s:blue0, s:blue_hi0 , "NONE")
 call s:hi("EndOfBuffer", s:bg0, s:bg0, "NONE")
@@ -237,12 +231,12 @@ call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 
-call s:hi('StatusLine', s:bg5, s:bg0, "Underline")
-call s:hi('StatusLineNC', s:bg5, s:bg0, "Underline")
+call s:hi('StatusLine', s:fg2, s:bg5, "None")
+call s:hi('StatusLineNC', s:bg3, s:bg5, "None")
 
-call s:hi('TablineSel', s:fg5, s:bg0, "NONE")
-call s:hi('Tabline', s:bg3, s:bg5, "NONE")
-call s:hi('TablineFill', s:fg0, s:bg5, "NONE")
+call s:hi('TablineSel', s:fg4, s:bg2, "None")
+call s:hi('Tabline', s:bg4, s:bg0, "NONE")
+call s:hi("TablineFill", s:bg0, s:bg0, "None")
 
 call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
@@ -262,7 +256,7 @@ call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
-call s:hi('markdownCode', s:fg2, "NONE", 'NONE')
+call s:hi('markdownCode', s:blue1, "NONE", 'NONE')
 call s:hi("Comment", s:bg4, "NONE", "italic")
 call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
 
