@@ -238,12 +238,12 @@ call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:black0, s:yellow0, "Bold")
 
-call s:hi('StatusLine', s:fg4, s:bg5, "None")
-call s:hi('StatusLineNC', s:bg4, s:bg5, "None")
+call s:hi('StatusLine', s:fg2, s:bg5, "Bold")
+call s:hi('StatusLineNC', s:fg3, s:bg5, "None")
 
-call s:hi('TablineSel', s:fg4, s:bg2, "None")
-call s:hi('Tabline', s:bg4, s:bg0, "NONE")
-call s:hi("TablineFill", s:bg0, s:bg0, "None")
+call s:hi('TablineSel', s:fg2, s:bg2, "Bold")
+call s:hi('Tabline', s:fg3, s:bg2, "NONE")
+call s:hi("TablineFill", s:bg2, s:bg2, "None")
 
 call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
@@ -252,7 +252,7 @@ call s:hi('Directory', s:fg2, "NONE", "NONE")
 hi! link Title Directory
 
 
-call s:hi('Visual', s:blue0, s:blue_hi1, "NONE")
+call s:hi('Visual', s:bg0, s:blue0, "NONE")
 hi! link VisualNOS Visual
 
 call s:hi('Search', "NONE", s:bg5, "NONE")
