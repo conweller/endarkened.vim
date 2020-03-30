@@ -208,14 +208,12 @@ call s:hi("LineNr", s:bg4, s:bg0, "NONE")
 hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
-hi! link CursorLineNr LineNr
 hi! link CursorColumn CursorLine
-" call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
+call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
-call s:hi("QuickFixLine", "NONE", "s:bg1" , "NONE")
+call s:hi("QuickFixLine", "NONE", s:bg1 , "NONE")
 
 call s:hi("NormalFloat", "NONE", s:bg2 , "NONE")
-call s:hi("EndOfBuffer", s:bg0, s:bg0, "NONE")
 
 call s:hi("Cursor", s:bg0, s:fg0 , "NONE")
 hi! link TermCursor Cursor
@@ -238,12 +236,12 @@ call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
 
 call s:hi("MatchParen", s:black0, s:yellow0, "Bold")
 
-call s:hi('StatusLine', s:fg2, s:bg5, "Bold")
+call s:hi('StatusLine', s:fg2, s:bg2, "Bold")
 call s:hi('StatusLineNC', s:fg3, s:bg5, "None")
 
-call s:hi('TablineSel', s:fg2, s:bg2, "Bold")
-call s:hi('Tabline', s:fg3, s:bg2, "NONE")
-call s:hi("TablineFill", s:bg2, s:bg2, "None")
+call s:hi('TablineSel', s:fg2, s:bg0, "Bold")
+call s:hi('Tabline', s:fg4, s:bg2, "NONE")
+call s:hi("TablineFill", s:bg2, s:bg5, "None")
 
 call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
@@ -252,7 +250,7 @@ call s:hi('Directory', s:fg2, "NONE", "NONE")
 hi! link Title Directory
 
 
-call s:hi('Visual', s:bg0, s:blue0, "NONE")
+call s:hi('Visual', "NONE", s:bg2, "NONE")
 hi! link VisualNOS Visual
 
 call s:hi('Search', "NONE", s:bg5, "NONE")
@@ -365,7 +363,8 @@ call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
 call s:hi('FindrDirPartial', s:fg5, "NONE", "Bold")
-hi! link FindrBorder VertSplit
+hi! link FindrBorder NormalTerm
+hi! link FindrNormal NormalFloat
 
 " }}}
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
