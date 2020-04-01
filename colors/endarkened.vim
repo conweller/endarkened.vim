@@ -184,12 +184,12 @@ if has('nvim')
   let g:terminal_color_6 = s:cyan1
   let g:terminal_color_7 = s:fg0
   let g:terminal_color_8 = s:bg3
-  let g:terminal_color_9 = s:red1
-  let g:terminal_color_10 = s:yellow1
-  let g:terminal_color_11 = s:green1
-  let g:terminal_color_12 = s:blue1
-  let g:terminal_color_13 = s:purple0
-  let g:terminal_color_14 = s:cyan1
+  let g:terminal_color_9 = s:red0
+  let g:terminal_color_10 = s:yellow0
+  let g:terminal_color_11 = s:green0
+  let g:terminal_color_12 = s:blue0
+  let g:terminal_color_13 = s:purple1
+  let g:terminal_color_14 = s:cyan0
   let g:terminal_color_15 = s:fg2
 endif
 " }}}
