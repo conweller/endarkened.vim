@@ -27,12 +27,12 @@ endfunction
 " Dark: {{{
 function! SetEndarkened()
   " black
-  let s:black0 = '#151515'
-  let s:black1 = '#202020'
-  let s:black2 = '#262626'
-  let s:black3 = '#656565'
-  let s:black4 = '#4e4e4e'
-  let s:black5 = '#303030'
+  let s:black0 = '#222222'
+  let s:black1 = '#292929'
+  let s:black2 = '#363636'
+  let s:black3 = '#727272'
+  let s:black4 = '#545454'
+  let s:black5 = '#404040'
 
   let s:bg0 = s:black0
   let s:bg1 = s:black1
@@ -57,13 +57,13 @@ function! SetEndarkened()
   let s:fg5 = s:white5
 
   " red
-  let s:red0 = '#AD1332'
-  let s:red1 = '#C33946'
+  let s:red0 = '#B82C45'
+  let s:red1 = '#D53E4C'
   let s:red_hi0 = '#33080C'
 
   " green
-  let s:green0 = '#3E8F51'
-  let s:green1 = '#68AE83'
+  let s:green0 = '#46A25C'
+  let s:green1 = '#70BB8C'
   let s:green_hi0 = '#0E2A19'
   let s:green_hi1 = '#0D2112'
 
@@ -202,7 +202,7 @@ hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:fg2, s:bg1, "Bold")
+call s:hi("CursorLineNr", s:fg5, s:bg2, "Bold")
 hi! link CursorLineNr LineNr
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", "NONE", s:bg1 , "NONE")
@@ -216,22 +216,22 @@ hi! link TermCursor Cursor
 
 
 call s:hi("Folded", s:bg3, s:bg1, "NONE")
-call s:hi("Error", s:red1, s:red_hi0, "NONE")
-call s:hi("Todo", s:cyan0, s:cyan_hi0, "bold")
+call s:hi("Error", s:bg0, s:red1, "bold")
+call s:hi("Todo", s:yellow1, "NONE", "Underline,Bold")
 
-call s:hi("ErrorMsg", s:red1, s:red_hi0, "NONE")
+call s:hi("ErrorMsg", s:red1, "NONE", "NONE")
 hi! link WarningMsg ErrorMsg
 
 hi! link MoreMsg IncSearch
 hi! link MoreMsg IncSearch
 hi! link Question IncSearch
 
-call s:hi("ModeMsg", s:blue1, s:blue_hi1, "Bold")
+call s:hi("ModeMsg", s:fg4, s:bg1, "None")
 
 call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 
-call s:hi('StatusLine', s:blue1, s:bg5, "Bold")
-call s:hi('StatusLineNC', s:fg3, s:bg5, "None")
+call s:hi('StatusLine', s:fg0, s:bg5, "Bold")
+call s:hi('StatusLineNC', s:fg4, s:bg5, "None")
 
 call s:hi('TablineSel', s:fg2, s:bg0, "Bold")
 call s:hi('Tabline', s:fg4, s:bg2, "NONE")
@@ -239,24 +239,24 @@ call s:hi("TablineFill", s:bg2, s:bg5, "None")
 
 call s:hi('VertSplit', s:bg0, s:bg5, "NONE")
 
-call s:hi('Directory', s:blue0, "NONE", "NONE")
+call s:hi('Directory', s:blue0, "NONE", "None")
 
 hi! link Title Directory
 
 
-call s:hi('Visual', "NONE", s:bg1, "NONE")
+call s:hi('Visual', "NONE", s:bg2, "NONE")
 hi! link VisualNOS Visual
 
 call s:hi('Search', "NONE", s:bg5, "NONE")
 
 call s:hi('IncSearch',s:bg0, s:orange1, "Bold")
 
-call s:hi('WildMenu', s:blue1, s:blue_hi0, "NONE")
+call s:hi('WildMenu', s:bg0, s:blue0, "Bold")
 call s:hi("NonText", s:bg5, "NONE", "NONE")
 " }}}
 " Syntax: {{{
 call s:hi('markdownCode', s:blue1, "NONE", 'NONE')
-call s:hi("Comment", s:bg4, "NONE", "italic")
+call s:hi("Comment", s:bg3, "NONE", "italic")
 call s:hi("Conceal", s:blue1, s:blue_hi1, "NONE")
 
 call s:hi("Underlined", "NONE",  "NONE", "underline")
@@ -301,8 +301,8 @@ hi! link Typedef StorageClass
 
 " }}}
 " Completion Menu {{{
-call s:hi('Pmenu', s:fg1, s:bg5, "NONE")
-call s:hi('PmenuSel', s:bg1, s:blue0, "NONE")
+call s:hi('Pmenu', s:fg1, s:bg2, "NONE")
+call s:hi('PmenuSel', s:bg1, s:blue0, "BOLD")
 call s:hi('PmenuSbar', "NONE", s:bg3, "NONE")
 call s:hi('PmenuThumb', "NONE", s:fg1, "NONE")
 " }}}
@@ -326,18 +326,18 @@ endif
 hi! CocUnderline    cterm=underline gui=underline
 hi! LspDiagnosticsUnderline    cterm=underline gui=underline
 
-call s:hi('CocErrorSign', s:red1, s:red_hi0, 'NONE')
+call s:hi('CocErrorSign', s:red1, "NONE", 'NONE')
 hi! link LspDiagnosticsError CocErrorSign
 
-call s:hi('CocWarningSign', s:yellow1, s:yellow_hi0, 'NONE')
+call s:hi('CocWarningSign', s:yellow1, "NONE", 'NONE')
 hi! link CocInfoSign CocWarningSign
 hi! link LspDiagnosticsWarning CocWarningSign
 
-call s:hi('CocHintSign', s:purple1, s:purple_hi0, 'NONE')
+call s:hi('CocHintSign', s:purple1, "NONE", 'NONE')
 hi! link LspDiagnosticsHint CocHintSign
 hi! link LspDiagnosticsInformation CocHintSign
 
-call s:hi('CocSelectedText', s:cyan1, s:cyan_hi0, 'NONE')
+call s:hi('CocSelectedText', s:cyan1, "NONE", 'NONE')
 
 call s:hi('CocCodeLens', s:bg3, "NONE", 'NONE')
 
@@ -355,12 +355,10 @@ call s:hi('GitGutterDelete', s:red0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 call s:hi('GitGutterChange', s:blue0, s:bg1, "NONE")
 
-call s:hi('FindrDirPartial', s:green0, "NONE", "Bold")
+call s:hi('FindrDirPartial', s:green0, "NONE", "BOLD")
 call s:hi('FindrSelected', "NONE", s:bg5, "NONE")
 hi! link FindrBorder NormalFloat
 hi! link FindrMatch CursorLine
-" call s:hi('FindrMatch', s:yellow0, "NONE", "Bold")
 hi! link FindrNormal NormalFloat
-
 " }}}
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
