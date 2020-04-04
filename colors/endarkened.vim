@@ -180,7 +180,7 @@ if has('nvim')
   let g:terminal_color_2 = s:yellow1
   let g:terminal_color_3 = s:green1
   let g:terminal_color_4 = s:blue1
-  let g:terminal_color_5 = s:purple0
+  let g:terminal_color_5 = s:purple1
   let g:terminal_color_6 = s:cyan1
   let g:terminal_color_7 = s:fg0
   let g:terminal_color_8 = s:bg3
@@ -188,7 +188,7 @@ if has('nvim')
   let g:terminal_color_10 = s:yellow0
   let g:terminal_color_11 = s:green0
   let g:terminal_color_12 = s:blue0
-  let g:terminal_color_13 = s:purple1
+  let g:terminal_color_13 = s:purple0
   let g:terminal_color_14 = s:cyan0
   let g:terminal_color_15 = s:fg2
 endif
@@ -298,7 +298,7 @@ hi! link Special PreProc
 call s:hi("StorageClass", s:orange1, "NONE", "NONE")
 hi! link Structure StorageClass
 hi! link Typedef StorageClass
-
+call s:hi("htmlStrike", s:fg4, "NONE", "italic")
 " }}}
 " Completion Menu {{{
 call s:hi('Pmenu', s:fg1, s:bg2, "NONE")
@@ -360,5 +360,6 @@ call s:hi('FindrSelected', "NONE", s:bg5, "NONE")
 hi! link FindrBorder NormalFloat
 hi! link FindrMatch CursorLine
 hi! link FindrNormal NormalFloat
+hi! link mkdBlockquote String
 " }}}
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
