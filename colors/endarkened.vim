@@ -202,7 +202,7 @@ hi! link signcolumn LineNr
 hi! link foldcolumn LineNr
 call s:hi("CursorLine", "NONE", s:bg1, "NONE")
 hi! link CursorColumn CursorLine
-call s:hi("CursorLineNr", s:fg5, s:bg2, "Bold")
+call s:hi("CursorLineNr", s:fg5, s:bg1, "Bold")
 hi! link CursorLineNr LineNr
 call s:hi("ColorColumn", "NONE" , s:bg1 , "NONE")
 call s:hi("QuickFixLine", "NONE", s:bg1 , "NONE")
@@ -233,13 +233,13 @@ call s:hi("MatchParen", s:bg0, s:blue0, "Bold")
 call s:hi('StatusLine', s:fg0, s:bg5, "Bold")
 call s:hi('StatusLineNC', s:fg4, s:bg5, "None")
 
-call s:hi('TablineSel', s:fg2, s:bg0, "Bold")
+call s:hi('TablineSel', s:fg2, s:bg5, "Bold")
 call s:hi('Tabline', s:fg4, s:bg2, "NONE")
-call s:hi("TablineFill", s:bg2, s:bg5, "None")
+call s:hi("TablineFill", s:bg2, s:bg2, "None")
 
-call s:hi('VertSplit', s:bg0, s:bg5, "NONE")
+call s:hi('VertSplit', s:bg5, "NONE", "NONE")
 
-call s:hi('Directory', s:blue0, "NONE", "None")
+call s:hi('Directory', s:blue0, "NONE", "BOLD")
 
 hi! link Title Directory
 
@@ -348,6 +348,9 @@ highlight default link WhichKeyFloating Pmenu
 
 
 call s:hi('mkdLineBreak', "NONE", "NONE", 'NONE')
+call s:hi('mkdCodeDelimiter', s:orange0, "NONE", 'NONE')
+hi! link mkdCodeStart mkdCodeDelimiter
+hi! link mkdCodeEnd mkdCodeDelimiter
 hi! link mkdCode markdownCode
 
 call s:hi('GitGutterAdd', s:green0, s:bg1, "NONE")
